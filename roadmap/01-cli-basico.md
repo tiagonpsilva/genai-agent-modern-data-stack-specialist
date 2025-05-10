@@ -1,5 +1,7 @@
 # CLI Básico
 
+![Status](https://img.shields.io/badge/status-concluído-brightgreen)
+
 ## Objetivo
 Implementar a estrutura inicial do CLI, com comando principal, mensagem de boas-vindas e modo interativo (esqueleto).
 
