@@ -1,13 +1,13 @@
 # 🤖 Agente Especialista em Modern Data Stack
 
-![Python](https://img.shields.io/badge/language-Python-blue?logo=python) ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue) ![Typer](https://img.shields.io/badge/CLI-Typer-0b7fab?logo=python) ![Langchain](https://img.shields.io/badge/LLM-Langchain-ffb86b) ![UI Rich](https://img.shields.io/badge/UI-Rich-6e44ff) ![Pydantic](https://img.shields.io/badge/config-Pydantic-009688?logo=pydantic) ![Poetry](https://img.shields.io/badge/build-poetry-60b5cc?logo=poetry)
+![Python](https://img.shields.io/badge/language-Python-blue?logo=python) ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue) ![Typer](https://img.shields.io/badge/CLI-Typer-0b7fab?logo=python) ![Langchain](https://img.shields.io/badge/LLM-Langchain-ffb86b) ![UI Rich](https://img.shields.io/badge/UI-Rich-6e44ff) ![Pydantic](https://img.shields.io/badge/config-Pydantic-009688?logo=pydantic) ![Poetry](https://img.shields.io/badge/build-poetry-60b5cc?logo=poetry) ![Architecture Haiku](https://img.shields.io/badge/haiku-arquitetura-6e44ff?style=flat-square&logo=poetry) ![ADR](https://img.shields.io/badge/ADR-decis%C3%A3o%20arquitetural-009688?style=flat-square&logo=pydantic)
+
 
 ## 📦 Sobre o Projeto
-Agente de linha de comando (CLI) que analisa até 5 repositórios locais do Github e responde, em português, sobre objetivo, detalhes e estrutura dos projetos, com foco em modern data stack.
-
----
+Agente especialista em Modern Data Stack, que utiliza repositórios do GitHub como fonte de dados e utiliza LLM para responder perguntas sobre o tema.
 
 ## 🧩 Architecture Haiku
+
 
 ```
 Pergunte ao agente  
@@ -151,5 +151,3 @@ Nota: 10
 - Se você já estava em outro ambiente virtual, pode ser necessário sair dele antes de ativar o do Poetry.
 - Se quiser garantir que o comando direto funcione, feche o terminal, abra um novo, ative o ambiente com `poetry shell` e tente novamente.
 - Se ainda assim não funcionar, use sempre `poetry run agent-data-specialist` — é a forma mais segura!
-
-
