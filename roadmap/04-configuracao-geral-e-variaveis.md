@@ -3,17 +3,16 @@
 ## Objetivo
 Criar uma estrutura centralizada para configurações do agente, incluindo o uso de variáveis de ambiente para manter credenciais e dados sensíveis seguros.
 
-## 🗺️ Diagrama C4 — Configuração Centralizada
+## 🗺️ Diagrama de Containers — Configuração
 
 ```mermaid
 %%{init: { "themeVariables": { "fontFamily": "Arial", "fontSize": "10px" } }}%%
-C4Container
-    title Configuração Centralizada
-    Person(user, "Usuário")
-    Container(agent, "Agente CLI", "Python/Typer")
-    Container(config, "Arquivo de Configuração", "config.yaml/.env")
-    user -> agent: Define/atualiza configurações
-    agent -> config: Lê variáveis e credenciais
+flowchart TD
+    U[Usuário]
+    CLI[Agente CLI]
+    CFG[Configuração - .env ou config.yaml]
+    U -->|Define configurações| CLI
+    CLI -->|Lê variáveis e credenciais| CFG
 ```
 
 ## Tarefas (To-Do)
