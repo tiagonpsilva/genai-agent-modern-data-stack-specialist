@@ -1,6 +1,6 @@
 # Prompt Base e Características do Agente
 
-![Status](https://img.shields.io/badge/status-n%C3%A3o%20iniciado-lightgrey)
+![Status](https://img.shields.io/badge/status-em%20andamento-yellow)
 
 ## Objetivo
 Criar uma estrutura para armazenar e versionar o prompt base do agente, incluindo suas características, persona e instruções de comportamento.
