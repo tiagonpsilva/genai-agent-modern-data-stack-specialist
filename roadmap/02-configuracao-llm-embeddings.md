@@ -1,18 +1,19 @@
 # Configuração da LLM e Embeddings
 
-## 🗺️ Diagrama C4 — LLM e Embeddings
+![Status](https://img.shields.io/badge/status-em%20andamento-yellow)
+
+## 🗺️ Diagrama de Containers — LLM e Embeddings
 
 ```mermaid
 %%{init: { "themeVariables": { "fontFamily": "Arial", "fontSize": "10px" } }}%%
-C4Container
-    title Configuração LLM e Embeddings
-    Person(user, "Usuário")
-    Container(agent, "Agente CLI", "Python/Typer")
-    Container(llm, "LLM", "OpenAI/HuggingFace")
-    Container(emb, "Embeddings", "OpenAI/Sentence Transformers")
-    user -> agent: Perguntas
-    agent -> llm: Consulta modelo de linguagem
-    agent -> emb: Gera/consulta embeddings
+flowchart TD
+    U[Usuário]
+    CLI[Agente CLI - Python Typer]
+    LLM[LLM - OpenAI/HuggingFace]
+    EMB[Embeddings - OpenAI/Sentence Transformers]
+    U -->|Perguntas| CLI
+    CLI -->|Consulta modelo de linguagem| LLM
+    CLI -->|Gera/consulta embeddings| EMB
 ```
 
 ## Objetivo

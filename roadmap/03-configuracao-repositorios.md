@@ -1,5 +1,7 @@
 # Configuração dos Repositórios do Github
 
+![Status](https://img.shields.io/badge/status-não iniciado-lightgrey)
+
 ## Objetivo
 Definir e configurar os repositórios do Github que o agente irá analisar, permitindo fácil apontamento e atualização.
 

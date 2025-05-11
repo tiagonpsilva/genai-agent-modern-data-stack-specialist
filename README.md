@@ -1,6 +1,6 @@
 # 🤖 Agente Especialista em Modern Data Stack
 
-![Python](https://img.shields.io/badge/language-Python-blue?logo=python) ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue) ![Typer](https://img.shields.io/badge/CLI-Typer-0b7fab?logo=python) ![Langchain](https://img.shields.io/badge/LLM-Langchain-ffb86b) ![UI Rich](https://img.shields.io/badge/UI-Rich-6e44ff) ![Pydantic](https://img.shields.io/badge/config-Pydantic-009688?logo=pydantic) ![Poetry](https://img.shields.io/badge/build-poetry-60b5cc?logo=poetry) ![Architecture Haiku](https://img.shields.io/badge/haiku-arquitetura-6e44ff?style=flat-square&logo=poetry) ![ADR](https://img.shields.io/badge/ADR-decis%C3%A3o%20arquitetural-009688?style=flat-square&logo=pydantic)
+![Python](https://img.shields.io/badge/language-Python-blue?logo=python) ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue) ![Typer](https://img.shields.io/badge/CLI-Typer-0b7fab?logo=python) ![Langchain](https://img.shields.io/badge/LLM-Langchain-ffb86b) ![UI Rich](https://img.shields.io/badge/UI-Rich-6e44ff) ![Pydantic](https://img.shields.io/badge/config-Pydantic-009688?logo=pydantic) ![Poetry](https://img.shields.io/badge/build-poetry-60b5cc?logo=poetry) ![Architecture Haiku](https://img.shields.io/badge/haiku-arquitetura-6e44ff?style=flat-square&logo=poetry) ![ADR](https://img.shields.io/badge/ADR-decis%C3%A3o%20arquitetural-009688?style=flat-square&logo=pydantic) ![Roadmap](https://img.shields.io/badge/roadmap-evolutivo-ffb86b?style=flat-square&logo=github)
 
 
 ## 📦 Sobre o Projeto
@@ -151,3 +151,52 @@ Nota: 10
 - Se você já estava em outro ambiente virtual, pode ser necessário sair dele antes de ativar o do Poetry.
 - Se quiser garantir que o comando direto funcione, feche o terminal, abra um novo, ative o ambiente com `poetry shell` e tente novamente.
 - Se ainda assim não funcionar, use sempre `poetry run agent-data-specialist` — é a forma mais segura!
+
+## ⚙️ Configuração (config.yaml)
+
+Exemplo de arquivo `config.yaml`:
+
+```yaml
+llm:
+  provider: openai
+  api_key: ${OPENAI_API_KEY}
+  model_name: gpt-3.5-turbo
+  temperature: 0.7
+
+embeddings:
+  provider: openai
+  model_name: text-embedding-3-small
+  api_key: ${OPENAI_API_KEY}
+
+repos:
+  - name: exemplo-repo
+    path: ./repos/exemplo
+    enabled: true
+
+prompt:
+  path: ./prompts/prompt-base.txt
+  description: Agente especialista em Modern Data Stack
+```
+
+> **Importante:**
+> A chave de API deve ser definida como variável de ambiente:
+> - `OPENAI_API_KEY`
+
+## 🖥️ Exemplos de uso do CLI
+
+Executar com configuração padrão:
+```bash
+agent-data-specialist interativo
+```
+
+Sobrescrever parâmetros via linha de comando:
+```bash
+agent-data-specialist interativo --llm-provider openai --llm-model gpt-3.5-turbo --llm-temperature 0.5 --emb-provider openai --emb-model text-embedding-3-small
+```
+
+Usar um arquivo de configuração alternativo:
+```bash
+agent-data-specialist interativo --config outro-config.yaml
+```
+
+A configuração carregada será exibida ao iniciar o modo interativo.

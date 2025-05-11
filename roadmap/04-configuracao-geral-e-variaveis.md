@@ -1,5 +1,7 @@
 # Configuração Geral e Variáveis de Ambiente
 
+![Status](https://img.shields.io/badge/status-n%C3%A3o%20iniciado-lightgrey)
+
 ## Objetivo
 Criar uma estrutura centralizada para configurações do agente, incluindo o uso de variáveis de ambiente para manter credenciais e dados sensíveis seguros.
 
